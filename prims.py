@@ -14,7 +14,7 @@ g = [[0, 19, 5, 0, 0],
 selected_node = [0, 0, 0, 0, 0]
 
 no_edge = 0
-
+final_cost=0
 selected_node[0] = True
 
 # printing for edge and weight
@@ -34,5 +34,8 @@ while (no_edge < N - 1):
                         a = i
                         b = j
     print(str(a) + "-" + str(b) + ":" + str(g[a][b]))
+    final_cost+= g[a][b]
     selected_node[b] = True
     no_edge += 1
+
+print(final_cost)

@@ -57,7 +57,7 @@ while ne < n:
     if(uni(u,v)):
         print(f"Edge from {a}->{b} has min value of  : {min_w}"),
         final_cost += min_w
-        g[a][b]=g[b][a]=float('inf') # Make selected edges as infinity again
         ne+=1
+    g[a][b]=g[b][a]=float('inf') # Make selected edges as infinity again
 
 print(parent)

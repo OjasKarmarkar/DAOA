@@ -1,6 +1,7 @@
 n = int(input("Enter no of jobs to schedule : "))
 jobs = []
 max_d = 0
+profit=0
 
 for i in range(0,n):
     deadline = int(input(f"Enter deadline of Job J{i+1} : "))
@@ -19,8 +20,11 @@ for job in jobs:
         if(gantt[j] == '0'):
             gantt[j] = job['name']
             placed = True
+            profit+=job['pr']
             break
 
     if placed == False:
         print(f"Job {job['name']} is not placed")
-    print(gantt)
+
+print("".join(gantt))
+print(profit)
