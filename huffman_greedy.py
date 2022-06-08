@@ -42,6 +42,7 @@ for ch in data:
         freq[ch] = 1
 
 freq = sorted(freq.items(), key=lambda x: x[1])
+print(freq)
 nodes = []
 
 for item in freq:
@@ -49,8 +50,8 @@ for item in freq:
 
 while(len(nodes) > 1):
     nodes = sorted(nodes, key=lambda x: x.freq)
-    right = nodes[0]
-    left = nodes[1]
+    right = nodes[1]
+    left = nodes[0]
     
     left.code = 0
     right.code = 1

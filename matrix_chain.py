@@ -22,6 +22,7 @@ def matrix_mult(p , dp):
                 if c<dp[i][j]:
                     dp[i][j] = c
                     k_table[i][j] = k
+    print('\n'.join('\t'.join(map(str, row)) for row in dp))
     return dp[1][n-1]
 
 #Final Cost
