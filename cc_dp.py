@@ -1,10 +1,9 @@
-denom = [int(item) for item in input("Enter Denominations : ").split()]
-goal = int(input("Enter Sum to achieve : "))
-x= len(denom)+1
-y = goal+1
+MAX = 10
+denom = [1, 4, 6]
 solution = []
+x, y, goal = 4, 9, 8
 
-matrix = [[0 for _ in range(y)] for _ in range(y)]
+matrix = [[0 for _ in range(MAX)] for _ in range(MAX)]
 
 
 def CC():

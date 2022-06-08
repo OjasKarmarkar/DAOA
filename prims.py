@@ -1,11 +1,11 @@
 # Prim's Algorithm in Python
 
-INF = 9999999
+INF = float('inf')
 # number of vertices in graph
 N = 5
 
 #creating graph by adjacency matrix method
-G = [[0, 19, 5, 0, 0],
+g = [[0, 19, 5, 0, 0],
      [19, 0, 5, 9, 2],
      [5, 5, 0, 1, 6],
      [0, 9, 1, 0, 1],
@@ -24,15 +24,15 @@ while (no_edge < N - 1):
     minimum = INF
     a = 0
     b = 0
-    for m in range(N):
-        if selected_node[m]:
-            for n in range(N):
-                if ((not selected_node[n]) and G[m][n]):  
-                    # not in selected and there is an edge
-                    if minimum > G[m][n]:
-                        minimum = G[m][n]
-                        a = m
-                        b = n
-    print(str(a) + "-" + str(b) + ":" + str(G[a][b]))
+    for i in range(N):
+        if selected_node[i]:
+            for j in range(N):
+                if ((not selected_node[j]) and g[i][j]):  
+                    # not in selected and there is an edge from i->j
+                    if minimum > g[i][j]:
+                        minimum = g[i][j]
+                        a = i
+                        b = j
+    print(str(a) + "-" + str(b) + ":" + str(g[a][b]))
     selected_node[b] = True
     no_edge += 1

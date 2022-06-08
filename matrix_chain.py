@@ -5,6 +5,7 @@ p = [int(item) for item in input("Enter Matrices , Dimensions : ").split()]
 n = len(p)
 
 dp = [[0]*(n) for i in range (n)]
+k_table = [[0]*(n) for i in range (n)]
 
 
 def matrix_mult(p , dp):
@@ -20,6 +21,7 @@ def matrix_mult(p , dp):
 
                 if c<dp[i][j]:
                     dp[i][j] = c
+                    k_table[i][j] = k
     return dp[1][n-1]
 
 #Final Cost

@@ -1,9 +1,6 @@
 final_sum = int(input("Enter the sum : "))
 subset = [int(item) for item in input("Enter The numbers (Subsubset) : ").split()]
-
-
 state = []
-soln = []
 
 
 def solve(s,  idx) :
